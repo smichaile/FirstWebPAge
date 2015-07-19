@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GWC Summer 2015 Adobe SF</title>
+	<!--  some javascript here    -->
+		<script>
+			function myFunction() {
+				document.getElementById("buttonDiv").innerHTML =   "This Div has changed!!!!";
+				alert('Hello world!');
+				document.getElementById("myDiv").innerHTML = '<button type="button" onclick=myFunction2()>New Button</button>';
+			}
+			function myFunction2() {
+				document.getElementById("myDiv").innerHTML = 'New content';
+			}
+			function menuFunction(theDiv) {
+				document.getElementById('myHTML').style.display = 'none';
+				document.getElementById('myCSS').style.display = 'none';
+				document.getElementById('myJS').style.display = 'none';
+				document.getElementById('myPHP').style.display = 'none';
+				document.getElementById('start').style.display = 'none';
+				document.getElementById(theDiv).style.display = 'block';
+				//alert("function working " +theDiv);
+			}			
+	    </script>
+		
+		<link rel="stylesheet" href="homepage2.css" />
+	
+	</head>
+	<body style="background-color:lightgrey; font-family:courier"">
+  <div id = "menuList">	
+	<h2>Horizontal List</h2>
+
+		<ul id="menu">
+		  <li><a href="#myHTML" onclick="menuFunction('myHTML')">HTML</a></li>
+		  <li><a href="#myCSS" onclick="menuFunction('myCSS')">CSS</a></li>
+		  <li><a href="#myJS"  onclick="menuFunction('myJS')">JavaScript</a></li>
+		  <li><a href="#myPHP" onclick="menuFunction('myPHP')">PHP</a></li>
+		</ul> 
+  </div>	
+	<br><br>
+	    <div id="start">
+			<p> Here is the div where things will appear when you click the menu items</p>
+		</div>
+
+		<div id="myHTML">
+			<h1>Here is the HTML section</h1>
+			<p>
+				<a href="https://scratch.mit.edu/projects/55761526/" target="_blank"><img src="html5.jpg" alt="Line" width="200" height="200"></a>			
+            </p>
+			<br>
+		</div>
+		<div id="myCSS">
+			<h1>Here is the CSS section</h1>
+			<p>
+				<a href="https://scratch.mit.edu/projects/55761526/" target="_blank"><img src="css.jpg" alt="Line" width="200" height="200"></a>			
+            </p>
+		</div>
+		<div id="myJS">
+			<h1>Here is the JS section</h1>
+			<p>
+				<a href="https://scratch.mit.edu/projects/55761526/" target="_blank"><img src="js.jpg" alt="Line" width="200" height="200"></a>			
+            </p>
+		</div>
+		<div id="myPHP">
+			<h1>Here is the PHP section</h1>
+			<p>
+				<a href="https://scratch.mit.edu/projects/55761526/" target="_blank"><img src="php.jpg" alt="Line" width="200" height="200"></a>			
+            </p>
+		</div>
+	  
+	</body>
+</html>
