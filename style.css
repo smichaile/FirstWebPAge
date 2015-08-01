@@ -133,3 +133,6 @@ body {
 	background-size: cover;
 }
 
+		#Monday, #Tuesday, #Wednesday, #Thursday, #Friday {
+			display: none;
+		}
