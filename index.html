@@ -1,200 +1,225 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<link href='http://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower' rel='stylesheet' type='text/css'>
+	<title>Page Title</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<!--<link rel="stylesheet" href="inc/js/lib/jquery.mobile-1.4.4.min.css"/>-->
+	<link rel="stylesheet" href="inc/css/styles.css" />
+	<!--  yELP AUTH  -->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>-->
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>-->
+			 
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<!-- JQUERY MOBILE LIBRARY    -->
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>	  -->
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<!--<script type="text/javascript" src="inc/js/lib/jquery.mobile-1.4.4.min.js"></script> -->
 
-<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="inc/js/functions.js"></script>
+	<script src="inc/js/tabletopLib/src/tabletop.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<script src="functions.js"></script>
-<script src="input.js"></script>
 </head>
-
 <body>
-<div data-role="page" id="Home">
-<div data-role="header">
-<h1 id="date" style="font-size:300%"></h1>
-<script>
-var d = new Date();
-document.getElementById("date").innerHTML = d.toDateString();
-</script>
-</div>
 
+<!-- Start of first page -->
+<div data-role="page" id="page1">
+	<div data-role="header" data-theme="d">
+		<h1>Foodubious</h1>
+	</div><!-- /header -->
 
-<header>
+	<div data-role="content">
+		<div class= "choices"">
+		<h1>What are you Hungry for?</h1>
+		  <br><br>
+		  <img id = "picHolder" src = "inc/images/foodChoice.png"  width = "300"/>
+		  <h2>Can't decide?</h2>
+		    <br>
+		    <h3>We can help!</h3>
+			<br>
+			<a href="#page2" ><img src="inc/images/start.png"  id= "start" alt="start" width = "300"></a>
+		</div>
+	</div><!-- /content -->
 
-    <div class="nav">
-      <ul>
-        <li><a href="#Home" onclick="menuFunction('Home')">Home</a></li>
-		<li class="Monday"><a href="#Monday" onclick="menuFunction('Monday')">Monday</a></li>
-        <li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li>
-        <li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li>
-        <li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li>
-        <li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
-        
-      </ul>
-    </div>
-  </header> 
+	<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
+<!-- Start of second page -->
+<div data-role="page" id="page2">
 
- <center><!--<img style="HEIGHT:200px;" src="FreshPaint-6-2015.png">--></center>
-</div>  
-	<br><br>
-	
-  <div id="Monday">			
-    <br>
-    <button onclick="menuFunction('Home')">Home </button>
-	<header>
-    <div class="nav">
-      <ul>		
-		<li class="Monday"><a href="#Monday" onclick="menuFunction('Monday')" ><h3>Monday</h3></a></li><hr width="75%"> 
-		  <div class="container">
-			<div class="monlistItems"></div>
-			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
-				<form class="addToListForm">
-					<input type="text" id="monItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> <label for="monItemInput"><input id="addMonday" type="submit" class="addToList" value="Add to List" onclick="mondayList()"/></label></center>
-				</form>
-			</div>
-		  </div>
+	<div data-role="header" data-theme="d">
+		<a href="#"  data-role="button"  data-rel="back" data-theme="b">Back</a>
+		<h1>Foodubious</h1>
 		
-		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
-        
-      </ul>
-    </div>
-  </header>
- </div>  
- 
-  <div id="Tuesday">			
-    <br>	
-	<button onclick="menuFunction('Home')">Home </button>
-	<header>
-    <div class="nav">
-     
-	 <ul>		
-		<li class="Monday"><a href="#Monday"  onclick="menuFunction('Monday')">Monday</a></li><hr width="75%"> 
+	</div><!-- /header -->
+
+	<div data-role="content">
+	<h1>What Meal?</h1>
+	<!--
+		<h1>What meal ???</h1>
+		<p><a href="#page1">Back to Page 1</a></p>
+	-->	
+        <div class = "choices">
+		  <a href="#page3"  value="breakfast" ><img src="inc/images/breakfast.png"  id= "breakfast" alt="meal" onclick="chooseFood(this)" width="300" ></a>
+		    
+		  <a href="#page3"  value="lunch" ><img src="inc/images/lunch.png"  id= "lunch" alt="meal" onclick="chooseFood(this)" width="300" ></a>
+		    <br><br>
+		  <a href="#page3"  value="dinner" ><img src="inc/images/dinner.png"  id= "dinner" alt="meal" onclick="chooseFood(this)" width="300" ></a>
+		  
+		  <a href="#page3"  value="dessert" ><img src="inc/images/dessert.png"  id= "dessert" alt="meal" onclick="chooseFood(this)" width="300" ></a>
+		    <br><br>
+		  <a href="#page3"  value="snack" ><img src="inc/images/snacks3.jpg"  id= "snack" alt="meal" onclick="chooseFood(this)" width="300" ></a>
+        </div>
+
 		
-		<li class="Tuesday"><a href="#Tuesday"><h3>Tuesday</h3></a></li><hr width="75%"> 
-			<div class="container">
-			<div class="tueslistItems"></div>
-			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
-				<form class="addToListForm">
-					<input type="text" id="tuesItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> <label for="tuesItemInput"><input id="addTuesday" type="submit" onclick="tuesdayList()" class="addToList" value="Add to List" /></label></center>
-				</form>
-			</div>
-		  </div>
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
-        
-      </ul>
- 
-    </div>
-  </header>
- </div>
- 
- 
-   <div id="Wednesday">			
-    <br>	
-	<button onclick="menuFunction('Home')" onclick="menuFunction('Home')">Home </button>
-	<header>
-    <div class="nav">
-     
-	 <ul>		
-		<li class="Monday"><a href="#Monday"  onclick="menuFunction('Monday')">Monday</a></li><hr width="75%"> 
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of third page -->
+<div data-role="page" id="page3">
+
+	<div data-role="header" data-theme="d">
+		<a href="#" data-role="button"  data-rel="back" data-theme="b">Back</a>
+		<h1>Foodubious</h1>
 		
-		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
+	</div><!-- /header -->
 
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')"><h3>Wednesday</h3></a></li><hr width="75%"> 
-		  <div class="container">
-			<div class="wedlistItems"></div>
-			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
-				<form class="addToListForm">
-					<input type="text" id="wedItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> <label for="wedItemInput"><input id="addWednesday" type="submit" onclick="wednesdayList()" class="addToList" value="Add to List" /></label></center>
-				</form>
-			</div>
-		  </div>
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
-        
-      </ul>
- 
-    </div>
-  </header>
- </div>
+	<div data-role="content">
+     <h1>Eat of Drink???</h1>
+        <div class = "choices">
+		  <br><br>
+		  <a href="#page4"  value="eat" ><img src="inc/images/eat.png"  id= "eat" alt="eat_drink" onclick="chooseFood(this)" width="300" ></a>
+		   <br><br><br>
+		   <h3>Or</h3>
+		   <br><br><br>
+		  <a href="#page4"  value="drink" ><img src="inc/images/drink.png"  id= "drink" alt="eat_drink" onclick="chooseFood(this)" width="300" ></a>
+        </div>
 
-  <div id="Thursday">			
-    <br>	
-	<button onclick="menuFunction('Home')" onclick="menuFunction('Home')">Home </button>
-	<header>
-    <div class="nav">
-     
-	 <ul>		
-		<li class="Monday"><a href="#Monday"  onclick="menuFunction('Monday')">Monday</a></li><hr width="75%"> 
 		
-		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
+	</div><!-- /content -->
 
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')"><h3>Thursday</h3></a></li><hr width="75%"> 
-		  <div class="container">
-			<div class="thurslistItems"></div>
-			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
-				<form class="addToListForm">
-					<input type="text" id="thursItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> <label for="thursItemInput"><input id="addThursday" type="submit" onclick="thursdayList()" class="addToList" value="Add to List" /></label></center>
-				</form>
-			</div>
-		  </div>
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')">Friday</a></li>
-        
-      </ul>
- 
-    </div>
-  </header>
- </div>
+	<div data-role="footer" data-theme="d">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
 
-  <div id="Friday">			
-    <br>	
-	<button onclick="menuFunction('Home')" onclick="menuFunction('Home')">Home </button>
-	<header>
-    <div class="nav">
-     
-	 <ul>		
-		<li class="Monday"><a href="#Monday"  onclick="menuFunction('Monday')">Monday</a></li><hr width="75%"> 
+
+<!-- Start of fourth page -->
+<div data-role="page" id="page4">
+
+	<div data-role="header" data-theme="d">
+		<a href="#" data-role="button"  data-rel="back" data-theme="b">Back</a>
+		<h1>Foodubious</h1>
 		
-		<li class="Tuesday"><a href="#Tuesday" onclick="menuFunction('Tuesday')">Tuesday</a></li><hr width="75%"> 
+	</div><!-- /header -->
 
-		<li class="Wednesday"><a href="#Wednesday" onclick="menuFunction('Wednesday')">Wednesday</a></li><hr width="75%"> 
-		<li class="Thursday"><a href="#Thursday" onclick="menuFunction('Thursday')">Thursday</a></li><hr width="75%"> 
-		<li class="Friday"><a href="#Friday" onclick="menuFunction('Friday')"><h3>Friday</h3></a></li>
- 		  <div class="container">
-			<div class="frilistItems"></div>
-			<div data-role="footer" class="ui-bar ui-footer" data-position="fixed">
-				<form class="addToListForm">
-					<input type="text" id="friItemInput" name="listItemInput" class="listItemInput" value="" />
-					<center> <label for="friItemInput"><input id="addFriday" type="submit" onclick="fridayList()" class="addToList" value="Add to List" /></label></center>
-				</form>
-			</div>
-		  </div>       
-      </ul>
- 
-    </div>
-  </header>
- </div>
+	<div data-role="content">
+        <h1>Hot or Cold???</h1>
+        <div class = "choices">
+		  <br><br>
+		  <a href="#page5"  value="hot" ><img src="inc/images/hot.png"  id= "hot" alt="hot_cold" onclick="chooseFood(this)" width="300" ></a>
+		   <br><br><br>
+		   <h3>Or</h3>
+		   <br><br><br>
+		  <a href="#page5"  value="cold" ><img src="inc/images/cold.png"  id= "cold" alt="hot_cold" onclick="chooseFood(this)" width="300" ></a>
+        </div>
 
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of fifth page -->
+<div data-role="page" id="page5">
+
+	<div data-role="header" data-theme="d">
+		<a href="#" data-role="button"  data-rel="back" data-theme="b">Back</a>
+		<h1>Foodubious</h1>
+		
+	</div><!-- /header -->
+
+	<div data-role="content">
+      <h1>Sweet or Savory???</h1>
+        <div class = "choices">
+		  <br><br>
+		  <a href="#page6"  value="savory" ><img src="inc/images/savory.png"  id= "savory" alt="sweet_savory" onclick="chooseFood(this)" width="300" ></a>
+		  
+		   <br><br><br>
+		   <h3>Or</h3>
+		   <br><br><br>
+		  <a href="#page6"  value="sweet" ><img src="inc/images/sweet.png"  id= "sweet" alt="sweet_savory" onclick="chooseFood(this)" width="300" ></a>
+        </div>
+
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<!-- Start of end page -->
+<div data-role="page" id="page6">
+
+	<div data-role="header" data-theme="d">
+	<!--<a href="#page1" data-role="button"  data-theme="b" onclick="startOver()">Start Over</a>-->
+	<input type="button"  data-role="button" data-theme="b" value="Start Over"onclick="startOver()" />
+		<h1>Foodubious</h1>
+		
+	</div><!-- /header -->
+
+	<div data-role="content">
+	<h1>Possibilities</h1>
+	    <div id="possibilities"> </div>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<!-- Start of end page -->
+<div data-role="page" id="page7">
+
+	<div data-role="header" data-theme="d">
+	<!--<a href="#page1" data-role="button"  data-theme="b" onclick="startOver()">Start Over</a>-->
+	<input type="button"  data-role="button" data-theme="b" value="Start Over"onclick="startOver()" />
+		<h1>Result</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+
+
+	    <div id="result"> </div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 </body>
 </html>
