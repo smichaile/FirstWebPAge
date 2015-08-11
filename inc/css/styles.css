@@ -1,0 +1,44 @@
+	.ui-footer {
+    position:absolute !important;
+    width:100%;
+    bottom:0;
+    }
+	
+	h2 , h1{
+		text-align:center;
+	}
+	.photos {
+		margin: 0 auto;
+		text-align:center;
+	}
+	.choices {
+		margin: 0 auto;
+		text-align:center;
+	}
+    .btn {
+       width:100px;
+       background:#A9E2F3;
+
+    }
+	#breakfast, #lunch, #dinner, #dessert, #snack {
+		padding-left:30px;
+	}
+	 
+	 
+	#result, #possibilities {
+		margin: 0 auto;
+		text-align:center;
+	}
+	
+	#resultCol1 {		
+	    display: inline;
+		padding-left: 80px;	
+	}
+	
+	#resultCol2 {
+		display: inline;		
+		padding-left: 300px;
+	}
+	
+	
+
